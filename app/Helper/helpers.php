@@ -14,8 +14,8 @@ function formatChatResponse($response)
     $response = preg_replace('/<body.*?>/', '', $response);
     $response = preg_replace('/<\/body>/', '', $response);
     $response = preg_replace('/<\/html>/', '', $response);
-    /*  $response = preg_replace('/\t/', '', $response); */
-    $response = preg_replace('/\n\s*\n/', "\n", $response);
+    $response = preg_replace('/\t/', '', $response);
+    $response = nl2br($response);
 
 
     return $response;
