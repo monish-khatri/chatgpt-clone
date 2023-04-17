@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\ChatGPTController;
+use App\Http\Controllers\LoginWithGoogleController;
 use App\Http\Controllers\ProfileController;
-use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -24,6 +24,10 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// Login With Google
+Route::get('google', [LoginWithGoogleController::class, 'redirectToGoogle'])->name('google.login');
+Route::get('google/callback', [LoginWithGoogleController::class, 'handleGoogleCallback']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
