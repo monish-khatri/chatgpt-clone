@@ -4,7 +4,9 @@ import { Head, Link } from '@inertiajs/vue3';
 
 <template>
     <Head title="Welcome" />
-        <div class="flex h-full w-full flex-col items-center justify-center bg-gray-50 dark:bg-gray-800">
+        <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 dark:bg-gray-900">
+
+        <div class="flex h-full w-full flex-col mt-6 px-6 py-4 bg-white dark:bg-gray-800 items-center justify-center overflow-hidden sm:rounded-lg">
             <div class="w-96 flex flex-col flex-auto justify-center items-center">
                 <div class="mb-5">
                     <svg width="41" height="41" viewBox="0 0 41 41" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +31,7 @@ import { Head, Link } from '@inertiajs/vue3';
             <div class="py-3 text-xs"><a href="https://openai.com/policies/terms-of-use" target="_blank" class="mx-3 text-gray-500" rel="noreferrer">Terms of use</a><span class="text-gray-600">|</span><a href="https://openai.com/policies/privacy-policy" target="_blank" class="mx-3 text-gray-500" rel="noreferrer">Privacy policy</a></div>
         </div>
         <div class="absolute top-0 left-0 right-0 z-[2]"></div>
+        </div>
 </template>
 <style>
 .bg-dots-darker {

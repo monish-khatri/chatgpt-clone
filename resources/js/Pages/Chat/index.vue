@@ -260,7 +260,7 @@ const title = computed(() => props.chat?.context[0].content ?? "New Chat");
                     <div class="relative flex-1 flex items-center">
                         <input
                             type="text"
-                            class="w-full bg-slate-700 text-white rounded-lg"
+                            class="w-full bg-slate-700 rounded-lg"
                             placeholder="Send a message..."
                             v-model="form.promt"
                             @keyup.enter="submit"
